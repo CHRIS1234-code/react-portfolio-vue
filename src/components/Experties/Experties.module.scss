@@ -1,0 +1,81 @@
+@import "../../styles/contants.scss";
+
+.wrapper {
+  background-color: white;
+
+  .container {
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;
+    > div {
+      flex: 1;
+    }
+
+    .leftSide {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+
+      .exp {
+        display: flex;
+        align-items: center;
+        border: 1px solid $border;
+        border-radius: 20px;
+        padding: 1.5rem;
+        gap: 2rem;
+        transition: all 300ms ease-in-out;
+
+        &:hover {
+          cursor: pointer;
+          box-shadow: 0px 21px 13px rgba($color: #000000, $alpha: 0.5);
+        }
+
+        // icons
+
+        > :nth-child(1) {
+          padding: 10px;
+          width: 3rem;
+          border-radius: 999px;
+        }
+
+        //  description
+        > :nth-child(2) {
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+
+          > :nth-child(1) {
+            font-size: 1.6rem;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+
+    .rightSide {
+
+        .para{
+            font-size: 14px;
+            font-weight: 900;
+            font-style: bold;
+        }
+
+        @media (max-width: $sm) {
+            text-align: center;
+        }
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+
+        .stats{
+            justify-content: flex-start;
+            gap: 4rem;
+
+            .stat{
+                flex-direction: column;
+                justify-content: flex-start;
+            }
+        }
+    }
+  }
+}
